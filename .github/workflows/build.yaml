@@ -1,0 +1,29 @@
+name: C Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Build the code using the Makefile
+      - name: Build the project
+        run: make
+
+      # Step 3: Upload the build artifacts
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: compiled-binary
+          path: ./path/to/output_binary_file

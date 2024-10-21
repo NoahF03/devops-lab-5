@@ -1,0 +1,25 @@
+# Exclude object files, binaries, and other build artifacts
+*.o
+*.out
+*.exe
+*.log
+
+# Exclude executable files
+my-app-binary
+
+# Exclude build directories
+/build/
+/bin/
+/obj/
+
+# Exclude temporary files
+*.tmp
+*.temp
+*.swp
+
+# Exclude macOS-specific files
+.DS_Store
+
+# Exclude Linux-specific files
+*.so
+*.a
